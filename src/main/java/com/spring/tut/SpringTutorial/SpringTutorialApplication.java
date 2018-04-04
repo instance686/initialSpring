@@ -15,7 +15,7 @@ public class SpringTutorialApplication {
 			//BeanFactory factory=new ClassPathXmlApplicationContext("spring.xml");
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
-			Triangle triangle=(Triangle)context.getBean("triangle");
+			Triangle triangle=(Triangle)context.getBean("triangle-alias");
 			triangle.draw();
 	}
 }

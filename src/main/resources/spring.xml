@@ -4,12 +4,18 @@
 <beans >
         
 <bean id="triangle" class="com.spring.tut.SpringTutorial.Triangle">
-	<property name="points">
-	<list>
-		<ref bean="zeroPoint" />
-		<ref bean="point2" />
-		<ref bean="point3" />
-	</list>
+	<property name="pointA" ref="zeroPoint"/>
+	<property name="pointB">
+		<bean id="point2" class="com.spring.tut.SpringTutorial.Point">
+			<property name="x" value="-20"/>
+			<property name="y" value="0"/>
+		</bean>
+	</property>
+	<property name="pointC">
+		<bean id="point3" class="com.spring.tut.SpringTutorial.Point">
+			<property name="x" value="0"/>
+			<property name="y" value="20"/>
+		</bean>
 	</property>
 </bean>
 
@@ -17,13 +23,7 @@
 		<property name="x" value="0"/>
 		<property name="y" value="0"/>
 </bean>
-<bean id="point2" class="com.spring.tut.SpringTutorial.Point">
-		<property name="x" value="-20"/>
-		<property name="y" value="0"/>
-</bean>
-<bean id="point3" class="com.spring.tut.SpringTutorial.Point">
-		<property name="x" value="0"/>
-		<property name="y" value="20"/>
-</bean>
+
+<alias name="triangle" alias="triangle-alias"/>
         
 </beans>
