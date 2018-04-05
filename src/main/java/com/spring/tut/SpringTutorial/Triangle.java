@@ -1,15 +1,12 @@
 package com.spring.tut.SpringTutorial;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
-public class Triangle implements ApplicationContextAware,BeanNameAware{
+public class Triangle{
 		private Point pointA;
 		private Point pointB;
 		private Point pointC;
-		private ApplicationContext context=null;
 		
 		
 		public Point getPointA() {
@@ -49,19 +46,15 @@ public class Triangle implements ApplicationContextAware,BeanNameAware{
 			System.out.println("PointC = ("+getPointC().getX()+","+getPointC().getY()+")");
 		}
 
+		
+		public void myInit() {
+			System.out.println("MyInit method called for Triangle");
 
-		@Override
-		public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-			// TODO Auto-generated method stub
-			context= applicationContext;
+		}
 			
+		public void cleanUp() {
+			System.out.println("MyDestroy method called for Triangle");	
 		}
 
-
-		@Override
-		public void setBeanName(String name) {
-			// TODO Auto-generated method stub
-			System.out.println(name);
-			
-		}
+		
 }

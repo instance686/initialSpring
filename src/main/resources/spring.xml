@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
-<beans >
+<beans>
         
-<bean id="triangle" class="com.spring.tut.SpringTutorial.Triangle" autowire="byName" >
+<bean id="triangle" class="com.spring.tut.SpringTutorial.Triangle" autowire="byName">
 </bean>
 
 <bean id="pointA" class="com.spring.tut.SpringTutorial.Point">
@@ -19,5 +19,6 @@
 			<property name="y" value="20"/>
 </bean>
 <alias name="triangle" alias="triangle-alias"/>
-        
+
+<bean class="com.spring.tut.SpringTutorial.DisplayNameBeanPostProcessor"/>       
 </beans>
