@@ -7,10 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd"
     xmlns:context="http://www.springframework.org/schema/context">
-<!--        
-<bean id="triangle" class="com.spring.tut.SpringTutorial.Triangle" autowire="byName">
-</bean>
---> 
+
 <bean id="pointA" class="com.spring.tut.SpringTutorial.Point">
 		<qualifier value="circleRelated"/>
 		<property name="x" value="0"/>
@@ -21,21 +18,13 @@
 			<property name="x" value="-20"/>
 			<property name="y" value="0"/>
 </bean>
-<bean id="pointC" class="com.spring.tut.SpringTutorial.Point">
+<bean id="center" class="com.spring.tut.SpringTutorial.Point">
 			<property name="x" value="0"/>
 			<property name="y" value="20"/>
 </bean>
-<alias name="triangle" alias="triangle-alias"/>
-<!-- 
-<bean class="com.spring.tut.SpringTutorial.DisplayNameBeanPostProcessor"/>   
-<bean class="com.spring.tut.SpringTutorial.MyBeanFactory"/>   
-
-<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
-	<property name="location" value="pointconfig.properties"/>
-</bean>    
- -->
-<bean id="circle" class="com.spring.tut.SpringTutorial.Circle" >
-</bean>
+<bean class="com.spring.tut.SpringTutorial.MyEventListenener"/>
+<bean id="circle" class="com.spring.tut.SpringTutorial.Circle"/> 
 
 <context:annotation-config/>
+
 </beans>
