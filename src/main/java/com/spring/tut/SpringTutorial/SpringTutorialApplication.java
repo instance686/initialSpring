@@ -14,7 +14,7 @@ public class SpringTutorialApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringTutorialApplication.class, args);
 			context = new ClassPathXmlApplicationContext("spring.xml");
-			Triangle triangle=(Triangle)context.getBean("triangle-alias");
-			triangle.draw();
+			Shape shape=(Shape)context.getBean("circle");
+			shape.draw();
 	}
 }

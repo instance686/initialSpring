@@ -3,7 +3,7 @@ package com.spring.tut.SpringTutorial;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class Triangle{
+public class Triangle implements Shape{
 		private Point pointA;
 		private Point pointB;
 		private Point pointC;
@@ -38,9 +38,9 @@ public class Triangle{
 			this.pointC = pointC;
 		}
 
-
+		@Override
 		public void draw() {
-			
+			System.out.println("Triangle is drawn");
 			System.out.println("PointA = ("+getPointA().getX()+","+getPointA().getY()+")");
 			System.out.println("PointB = ("+getPointB().getX()+","+getPointB().getY()+")");
 			System.out.println("PointC = ("+getPointC().getX()+","+getPointC().getY()+")");

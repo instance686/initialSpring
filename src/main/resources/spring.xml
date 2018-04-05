@@ -26,5 +26,9 @@
 <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
 	<property name="location" value="pointconfig.properties"/>
 </bean>    
+
+<bean id="circle" class="com.spring.tut.SpringTutorial.Circle" >
+	<property name="point" ref="pointA"/>
+</bean>
     
 </beans>
