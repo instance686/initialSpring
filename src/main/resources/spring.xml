@@ -30,5 +30,7 @@
 <bean id="circle" class="com.spring.tut.SpringTutorial.Circle" >
 	<property name="point" ref="pointA"/>
 </bean>
+
+<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor	"/>
     
 </beans>

@@ -1,5 +1,7 @@
 package com.spring.tut.SpringTutorial;
 
+import org.springframework.beans.factory.annotation.Required;
+
 public class Circle implements Shape{
 	
 	private Point point;
@@ -9,7 +11,7 @@ public class Circle implements Shape{
 		return point;
 	}
 
-
+	@Required
 	public void setPoint(Point point) {
 		this.point = point;
 	}
